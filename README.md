@@ -45,21 +45,32 @@ Repo nazywa się `praha6248.github.io`, więc strona działa w katalogu główny
 
 ```
 src/
-  App.jsx        scena 3D, kamera, monitor z projektami, przycisk CV
+  App.jsx        scena 3D, kamera, ekran monitora, ekran ładowania, awaryjny widok bez 3D
+  projects.js    lista projektów na monitorze i linki kontaktowe
   App.css        style okna „Projects”, nagłówka i kart projektów
   main.jsx       punkt wejścia React
 public/
   obj/*.glb      modele 3D (biurko, monitor, kartki, akcesoria…)
-  *.png          miniatury projektów i kursory
-  Natalia_Plocha_CV.pdf
+  projects/      miniatury projektów (WebP, 1600×744)
+  Natalia_Plocha_CV.pdf, og.png, favicon.svg
+scripts/
+  replace-cv-texture.mjs   podmienia obraz CV na kartkach (kartki.glb)
 ```
 
-Żeby dodać projekt do „monitora”, dopisz kolejny blok `.project` w komponencie `MonitorScreen`
-w `src/App.jsx` i wrzuć miniaturę do `public/`.
+Żeby dodać projekt do „monitora”, dopisz obiekt w `src/projects.js` i wrzuć miniaturę
+1600×744 do `public/projects/`.
+
+Lista projektów jest zwykłą warstwą HTML ustawianą nad ekranem monitora (pozycja liczona
+z projekcji rogów ekranu), więc tekst i obrazki są ostre na każdym ekranie. Na telefonie
+otwiera się jako panel na całą szerokość. Adresy `#projects` i `#resume` otwierają od razu
+odpowiedni widok.
+
+Po zmianie CV: wygeneruj PDF, wyrenderuj stronę do JPG (portret obrócony o 90° w prawo,
+ok. 2800×1980) i uruchom `node scripts/replace-cv-texture.mjs cv.jpg`.
 
 ## Technologie
 
-React 19 · Three.js · @react-three/fiber · @react-three/drei (CameraControls, Environment, Html) ·
+React 19 · Three.js · @react-three/fiber · @react-three/drei (CameraControls, Environment + Lightformer) ·
 @react-three/postprocessing · Vite · gh-pages
 
 ## Licencja
