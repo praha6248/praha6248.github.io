@@ -7,6 +7,13 @@ export const PROJECTS = [
     url: 'https://github.com/praha6248/Robot_arm-nl',
   },
   {
+    title: 'PDF Diploma Checker',
+    description: 'Desktop app that reviews theses: layout, language, references, and charts checked against the text by a local vision model. Top contributor in a team of 7.',
+    tech: ['Python', 'PySide6', 'llama.cpp', 'Team of 7'],
+    image: 'projects/diploma-checker.webp',
+    url: 'https://github.com/PDF-Diploma-Checker/app',
+  },
+  {
     title: 'Robot arm simulation',
     description: '6-axis arm with analytic inverse kinematics, contact-based grasping and a text robot language over TCP.',
     tech: ['C++17', 'OpenGL', 'GoogleTest'],
