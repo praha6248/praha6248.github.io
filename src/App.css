@@ -410,3 +410,56 @@ canvas {
   margin: 0;
   line-height: 2;
 }
+
+#tagline {
+  margin: 6px 0 0;
+  color: #c9a3e8;
+  font-family: Arial, sans-serif;
+  font-size: 14px;
+  letter-spacing: 1px;
+  pointer-events: auto;
+}
+
+#hint {
+  position: absolute;
+  left: 50%;
+  bottom: 40px;
+  transform: translateX(-50%);
+  z-index: 20;
+  color: rgba(255, 255, 255, 0.75);
+  font-family: Arial, sans-serif;
+  font-size: 15px;
+  text-align: center;
+  pointer-events: none;
+  animation: hint-in 0.8s ease 1s both, breathe 3s ease-in-out 2s infinite;
+}
+
+@keyframes breathe {
+  0%, 100% { color: rgba(255, 255, 255, 0.75); }
+  50% { color: #FF93A8; }
+}
+
+@keyframes hint-in {
+  from { opacity: 0; transform: translate(-50%, 12px); }
+  to { opacity: 1; transform: translate(-50%, 0); }
+}
+
+@media (max-width: 760px) {
+  #tagline {
+    font-size: 12px;
+  }
+
+  #tagline span {
+    display: block;
+  }
+
+  #tagline .sep {
+    display: none;
+  }
+
+  #hint {
+    bottom: 24px;
+    width: calc(100% - 40px);
+    font-size: 13px;
+  }
+}

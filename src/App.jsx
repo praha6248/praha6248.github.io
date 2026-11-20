@@ -241,6 +241,8 @@ function ContactLinks() {
   )
 }
 
+const isTouch = window.matchMedia('(pointer: coarse)').matches
+
 const HASH_VIEWS = { '#projects': VIEWS.MONITOR, '#resume': VIEWS.PAPERS }
 const viewFromHash = () => HASH_VIEWS[window.location.hash] ?? VIEWS.HOME
 
@@ -265,7 +267,10 @@ export default function App() {
     <div id="app-wrapper">
       <header id="main-header">
         <div className="header-content">
-          <h1 id="name">NATALIA PŁOCHA</h1>
+          <div>
+            <h1 id="name">NATALIA PŁOCHA</h1>
+            <p id="tagline"><span>Robotics · C++ · Python</span><span className="sep"> · </span><span>4th-year student at Gdańsk Tech</span></p>
+          </div>
           <nav className="nav-menu">
             <a href="#" className={view === VIEWS.HOME ? 'active' : ''} onClick={(e) => { e.preventDefault(); select(VIEWS.HOME) }}>Home</a>
             <a href="#resume" className={isPapersFocused ? 'active' : ''} onClick={(e) => { e.preventDefault(); select(VIEWS.PAPERS) }}>Resume</a>
@@ -306,6 +311,10 @@ export default function App() {
       </SceneBoundary>
 
       {isMonitorFocused && screenRect && <MonitorScreen rect={screenRect} onClose={() => select(VIEWS.MONITOR)} />}
+
+      {view === VIEWS.HOME && (
+        <div id="hint">{isTouch ? 'Tap' : 'Click'} the monitor for projects or the papers for my CV</div>
+      )}
 
       <LoadingScreen />
 
