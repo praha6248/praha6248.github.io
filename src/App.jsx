@@ -80,7 +80,7 @@ function MonitorScreen({ isOn, onClose }) {
               </div>
             </div>
           </a>
-          <a href="https://github.com/praha6248/symulacja_falling_sand" target="_blank" rel="noopener noreferrer" onClick={(e) => e.stopPropagation()}>
+          <a href="https://github.com/praha6248/physics-sandbox-3d" target="_blank" rel="noopener noreferrer" onClick={(e) => e.stopPropagation()}>
             <div className="project">
               <img src={`${base}sandbox.png`} alt="sandbox" />
               <div className="card">
@@ -88,14 +88,14 @@ function MonitorScreen({ isOn, onClose }) {
                 <div className="title">Sandbox</div>
                 <div className="description">Symulacja typu falling sand</div>
                 <div className="git">
-                  <a href="https://github.com/praha6248/symulacja_falling_sand" target="_blank" rel="noopener noreferrer" onClick={(e) => e.stopPropagation()}>
+                  <a href="https://github.com/praha6248/physics-sandbox-3d" target="_blank" rel="noopener noreferrer" onClick={(e) => e.stopPropagation()}>
                     <img src={`${base}git.png`} alt="git" />
                   </a>
                 </div>
               </div>
             </div>
           </a>
-          <a href="https://github.com/praha6248/hackathon_smart_city" target="_blank" rel="noopener noreferrer" onClick={(e) => e.stopPropagation()}>
+          <a href="https://github.com/praha6248/smart-city-gdansk" target="_blank" rel="noopener noreferrer" onClick={(e) => e.stopPropagation()}>
             <div className="project">
               <img src={`${base}hackathon.png`} alt="map" />
               <div className="card">
@@ -105,14 +105,14 @@ function MonitorScreen({ isOn, onClose }) {
                 <div className="title">Smart city</div>
                 <div className="description">Interaktywna mapa Gdańska</div>
                 <div className="git">
-                  <a href="https://github.com/praha6248/hackathon_smart_city" target="_blank" rel="noopener noreferrer" onClick={(e) => e.stopPropagation()}>
+                  <a href="https://github.com/praha6248/smart-city-gdansk" target="_blank" rel="noopener noreferrer" onClick={(e) => e.stopPropagation()}>
                     <img src={`${base}git.png`} alt="git" />
                   </a>
                 </div>
               </div>
             </div>
           </a>
-          <a href="https://github.com/praha6248/BudgetApp/" target="_blank" rel="noopener noreferrer" onClick={(e) => e.stopPropagation()}>
+          <a href="https://github.com/praha6248/budget-app" target="_blank" rel="noopener noreferrer" onClick={(e) => e.stopPropagation()}>
             <div className="project">
               <img src={`${base}budget.png`} alt="budget" />
               <div className="card">
@@ -121,7 +121,7 @@ function MonitorScreen({ isOn, onClose }) {
                 <div className="title">Budget app</div>
                 <div className="description">Aplikacja umożliwiająca śledzenie wydatków</div>
                 <div className="git">
-                  <a href="https://github.com/praha6248/BudgetApp/" target="_blank" rel="noopener noreferrer" onClick={(e) => e.stopPropagation()}>
+                  <a href="https://github.com/praha6248/budget-app" target="_blank" rel="noopener noreferrer" onClick={(e) => e.stopPropagation()}>
                     <img src={`${base}git.png`} alt="git" />
                   </a>
                 </div>

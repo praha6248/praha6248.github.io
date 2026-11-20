@@ -4,7 +4,7 @@ Interaktywne portfolio w formie trójwymiarowego biurka renderowanego w przeglą
 Zamiast klasycznej strony z listą projektów odwiedzający „siada przy biurku”:
 klika w monitor, żeby przeglądać projekty, albo w kartki, żeby zobaczyć i pobrać CV.
 
-**▶ Wersja online: [praha6248.github.io/strona_portfolio](https://praha6248.github.io/strona_portfolio/)**
+**▶ Wersja online: [praha6248.github.io](https://praha6248.github.io/)**
 
 ![React](https://img.shields.io/badge/React-19-61DAFB?logo=react&logoColor=black)
 ![Three.js](https://img.shields.io/badge/Three.js-r183-000000?logo=threedotjs)
@@ -27,7 +27,7 @@ Wymagany Node.js 20+.
 
 ```bash
 npm install
-npm run dev        # serwer deweloperski Vite: http://localhost:5173/strona_portfolio/
+npm run dev        # serwer deweloperski Vite: http://localhost:5173/
 ```
 
 Inne skrypty:
@@ -39,7 +39,7 @@ npm run lint       # ESLint
 npm run deploy     # build + publikacja dist/ na gałąź gh-pages
 ```
 
-`base` w `vite.config.js` jest ustawione na `/strona_portfolio/`, żeby ścieżki działały na GitHub Pages.
+Repo nazywa się `praha6248.github.io`, więc strona działa w katalogu głównym domeny (`base: '/'` w `vite.config.js`).
 
 ## Struktura
 
@@ -64,4 +64,4 @@ React 19 · Three.js · @react-three/fiber · @react-three/drei (CameraControls,
 
 ## Licencja
 
-[MIT](LICENSE)
+Kod: [MIT](LICENSE). Treść CV i modele 3D nie są objęte licencją.
