@@ -28,8 +28,8 @@ export const PROJECTS = [
     url: 'https://github.com/ev3nt-h0riz0n/Embedded_Systems_Project_2026',
   },
   {
-    title: 'Evolutionary path planning',
-    description: 'Genetic algorithm that plans collision-free paths for a mobile robot, with a C++ core and Python bindings.',
+    title: 'Evolutionary path planning library',
+    description: 'C++17 genetic-algorithm library that plans collision-free paths for a mobile robot, with Python bindings, pip packaging and tests.',
     tech: ['C++17', 'pybind11', 'Python'],
     image: 'projects/path-planning.webp',
     url: 'https://github.com/praha6248/evolutionary-path-planning',
