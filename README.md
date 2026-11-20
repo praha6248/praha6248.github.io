@@ -1,16 +1,63 @@
-# React + Vite
+# Portfolio 3D — Natalia Płocha
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Interaktywne portfolio w formie trójwymiarowego biurka renderowanego w przeglądarce.
+Zamiast klasycznej strony z listą projektów odwiedzający „siada przy biurku”:
+klika w monitor, żeby przeglądać projekty, albo w kartki, żeby zobaczyć i pobrać CV.
 
-Currently, two official plugins are available:
+**▶ Wersja online: [praha6248.github.io/strona_portfolio](https://praha6248.github.io/strona_portfolio/)**
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+![React](https://img.shields.io/badge/React-19-61DAFB?logo=react&logoColor=black)
+![Three.js](https://img.shields.io/badge/Three.js-r183-000000?logo=threedotjs)
+![Vite](https://img.shields.io/badge/Vite-7-646CFF?logo=vite&logoColor=white)
+![GitHub Pages](https://img.shields.io/badge/deploy-GitHub%20Pages-222?logo=github)
 
-## React Compiler
+## Funkcje
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- **Scena 3D** — biurko z akcesoriami wczytywane z modeli `.glb`, oświetlenie środowiskowe i cienie.
+- **Nawigacja kamerą** — płynne przejścia między widokami (*Home*, *Projects*, *Resume*), sterowane
+  z menu u góry albo kliknięciem w obiekt na scenie.
+- **Podświetlanie obiektów** — po najechaniu kursorem monitor i kartki dostają obrys (postprocessing `Outline`).
+- **Ekran monitora jako okno HTML** — lista projektów z miniaturami, stosem technologii i linkami do GitHuba,
+  osadzona w scenie 3D (`<Html transform>` z drei).
+- **CV do pobrania** — po przybliżeniu kartek pojawia się przycisk *Download CV*.
 
-## Expanding the ESLint configuration
+## Uruchomienie lokalne
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Wymagany Node.js 20+.
+
+```bash
+npm install
+npm run dev        # serwer deweloperski Vite: http://localhost:5173/strona_portfolio/
+```
+
+Inne skrypty:
+
+```bash
+npm run build      # build produkcyjny do dist/
+npm run preview    # podgląd builda
+npm run lint       # ESLint
+npm run deploy     # build + publikacja dist/ na gałąź gh-pages
+```
+
+`base` w `vite.config.js` jest ustawione na `/strona_portfolio/`, żeby ścieżki działały na GitHub Pages.
+
+## Struktura
+
+```
+src/
+  App.jsx        scena 3D, kamera, monitor z projektami, przycisk CV
+  App.css        style okna „Projects”, nagłówka i kart projektów
+  main.jsx       punkt wejścia React
+public/
+  obj/*.glb      modele 3D (biurko, monitor, kartki, akcesoria…)
+  *.png          miniatury projektów i kursory
+  Natalia_Plocha_CV.pdf
+```
+
+Żeby dodać projekt do „monitora”, dopisz kolejny blok `.project` w komponencie `MonitorScreen`
+w `src/App.jsx` i wrzuć miniaturę do `public/`.
+
+## Technologie
+
+React 19 · Three.js · @react-three/fiber · @react-three/drei (CameraControls, Environment, Html) ·
+@react-three/postprocessing · Vite · gh-pages
