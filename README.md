@@ -61,3 +61,7 @@ w `src/App.jsx` i wrzuć miniaturę do `public/`.
 
 React 19 · Three.js · @react-three/fiber · @react-three/drei (CameraControls, Environment, Html) ·
 @react-three/postprocessing · Vite · gh-pages
+
+## Licencja
+
+[MIT](LICENSE)
