@@ -402,6 +402,21 @@ canvas {
   #monitor .techStack {
     font-size: 44px;
   }
+
+  #monitor .window-title {
+    font-size: 80px;
+  }
+
+  #monitor #cross {
+    width: 160px;
+    height: 160px;
+  }
+
+  #monitor #cross::before,
+  #monitor #cross::after {
+    width: 16px;
+    height: 120px;
+  }
 }
 
 #fallback ul {

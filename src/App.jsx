@@ -50,7 +50,8 @@ const MOBILE_WIDTH = 760
 
 function MonitorScreen({ rect, onClose }) {
   if (window.innerWidth < MOBILE_WIDTH) {
-    rect = { left: 12, top: 120, width: window.innerWidth - 24, height: window.innerHeight - 132 }
+    const top = document.getElementById('main-header').offsetHeight + 4
+    rect = { left: 12, top, width: window.innerWidth - 24, height: window.innerHeight - top - 12 }
   }
   const zoom = rect.width / SCREEN.designWidth
   return (
